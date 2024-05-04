@@ -40,3 +40,16 @@ class _ColorChangeWidgetState extends State<ColorChangeWidget> {
     );
   }
 }
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Color Change Widget'),
+      ),
+      body: Center(
+        child: ColorChangeWidget(),
+      ),
+    ),
+  ));
+}
