@@ -7,12 +7,21 @@ class ColorChangeWidget extends StatefulWidget {
 
 class _ColorChangeWidgetState extends State<ColorChangeWidget> {
   Color _currentColor = Colors.blue;
+  void _changeColor() {
+    setState(() {
+      if (_currentColor == Colors.blue) {
+        _currentColor = Colors.red;
+      } else {
+        _currentColor = Colors.blue;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Lógica para cambiar el color
+        _changeColor();
       },
       child: Container(
         color: _currentColor,
